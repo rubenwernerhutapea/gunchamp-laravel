@@ -17,8 +17,8 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/lomba', 'LombaController@index')->name('lomba');
 Route::get('/details/{id?}', 'DetailController@index')->name('detail');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-Route::get('/dashboard/profile', 'DashboardProfileController@index')->name('profile');
-Route::get('/dashboard/lomba', 'DashboardLombaController@index')->name('lomba');
+Route::get('/dashboard/profile', 'DashboardProfileController@index')->name('dashboard-profile');
+Route::get('/dashboard/lomba', 'DashboardLombaController@index')->name('dashboard-lomba');
 Route::get('/dashboard/lomba/add', 'DashboardLombaController@create')->name('tambah-lomba');
 
 //->middleware(['auth', 'admin'])

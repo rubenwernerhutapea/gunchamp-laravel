@@ -36,7 +36,7 @@
         <nav class="navbar top-navbar navbar-expand-md navbar-dark">
           <div class="navbar-header" data-logobg="skin6">
             <!-- logo -->
-            <a class="navbar-brand" href="../frontend/index.html" target="_blank">
+            <a class="navbar-brand" href="{{ route('home') }}" target="_blank">
               <!-- Logo icon -->
               <b class="logo-icon">
                 <!-- Dark Logo icon -->
@@ -101,7 +101,7 @@
                 </a>
               </li>
               <li class="text-center p-20 upgrade-btn">
-                <a href="../frontend/index.html" class="btn d-grid btn-danger text-white">Keluar</a>
+                <a href="{{ route('home') }}" class="btn d-grid btn-danger text-white">Keluar</a>
               </li>
             </ul>
           </nav>

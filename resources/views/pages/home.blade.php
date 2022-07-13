@@ -46,7 +46,7 @@
   <div class="container text-center">
     <h2 class="font-weight-bold text">Apakah kamu penyelenggara lomba?</h2>
     <h3 class="font-italic text">Promosikan perlombaanmu sekarang!</h3>
-    <a class="btn btn-warning btn-lg tombol mt-4" href="#" role="button">Promosi Sekarang</a>
+    <a class="btn btn-warning btn-lg tombol mt-4" href="{{ url('/register') }}" role="button">Promosi Sekarang</a>
   </div>
 </div>
 <!-- AKHIR BANNER -->

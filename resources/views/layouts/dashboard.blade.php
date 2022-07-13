@@ -104,7 +104,7 @@
                 </a>
               </li>
               <li class="text-center p-20 upgrade-btn">
-                <a href="../frontend/index.html" class="btn d-grid btn-danger text-white" target="_blank">Keluar</a>
+                <a href="{{ route('home') }}" class="btn d-grid btn-danger text-white" target="_blank">Keluar</a>
               </li>
             </ul>
           </nav>

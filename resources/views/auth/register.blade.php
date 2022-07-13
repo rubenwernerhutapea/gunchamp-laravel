@@ -37,7 +37,7 @@
         </div>
     </form>
 
-    <p class="d-flex justify-content-center">Sudah memiliki akun? <a class="pl-1" href="#"> Masuk Akun</a></p>
+    <p class="d-flex justify-content-center">Sudah memiliki akun? <a class="pl-1" href="{{ url('/login') }}"> Masuk Akun</a></p>
     </div>
 </section>
 <!-- AKHIR FORM -->
