@@ -1,0 +1,277 @@
+/* @font-face {
+  font-family: "Rasa";
+  src: url("font/static/Rasa-Regular.ttf") format("truetype");
+} */
+
+body {
+  /* font-family: "Rasa", arial, helvetica, sans-serif; */
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  min-height: 450px;
+}
+
+.jumbotron-lomba hr {
+  width: 400px;
+  border-top: 2px solid black;
+}
+
+.navbar {
+  background: #0b0e40;
+  transition: 0.5s ease;
+}
+
+/* .navbar.navbar-muncul {
+  background-color: #0b0e40;
+} */
+
+.jumbotron.main {
+  height: 100vh;
+  background-image: url("../img/bg-2.png");
+  /* untuk membuat fix bg . contoh dari parallax*/
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: #faf2d5;
+  display: flex;
+  margin-bottom: 0px;
+}
+
+.jumbotron.main .container {
+  margin: auto;
+}
+
+.about {
+  height: 500px;
+  background-image: url("../img/bg-about.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.about p {
+  color: #0b0e40;
+}
+
+.jumbotron.banner {
+  height: 300px;
+  background-image: url("../img/banner.png");
+  /* untuk membuat fix bg . contoh dari parallax*/
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: #faf2d5;
+  margin-bottom: 0px;
+}
+
+.jumbotron.banner .container {
+  padding-top: 10px;
+}
+
+footer {
+  background-color: #faa600;
+  /* margin-top: -32px; */
+  font-size: 13px;
+}
+
+footer .sosmed i {
+  font-size: 28px;
+}
+
+footer i {
+  font-size: 20px;
+}
+
+/* Utility */
+.tombol {
+  margin: 0 5px;
+  border-radius: 40px;
+}
+
+/* LOGIN */
+body.login,
+body.regist {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-image: url("../img/banner.png");
+  background-size: cover;
+  background-position: center;
+  color: #0b0e40;
+}
+
+.login-form .container {
+  max-width: 400px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  margin-top: 80px;
+}
+
+.login-form .container form {
+  font-size: 14px;
+}
+
+.user-details .form-group input {
+  height: 40px;
+  width: 100%;
+  padding-left: 15px;
+  font-size: 14px;
+}
+
+form .button {
+  height: 45px;
+  margin: 35px 0;
+}
+
+form .button button {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #0b0e40;
+}
+
+.login-form .container p {
+  font-size: 13px;
+}
+
+.login-form .container p a {
+  text-decoration: none;
+  color: #faa600;
+}
+
+/* REGIST */
+body.regist .login-form .container {
+  max-width: 600px;
+}
+
+body.regist form .button {
+  height: 45px;
+  margin: 10px 0 20px;
+}
+
+/* LOMBA */
+.nav-lomba {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.jumbotron-lomba {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 2rem;
+  margin-bottom: 0px;
+  color: #0b0e40;
+}
+
+section.lomba {
+  color: white;
+}
+
+.lomba .card,
+.lomba .card img {
+  background-color: #0b0e40;
+  border-radius: 25px;
+}
+
+.lomba .card img {
+  height: 250px;
+  background-image: url("../img/lomba/poster2_workshop.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.lomba .card .btn-category {
+  cursor: auto;
+  font-size: 12px;
+}
+
+.lomba p {
+  font-size: 14px;
+}
+
+/* DETAILS */
+.section-details-header {
+  min-height: 310px;
+  background: #0b0e40;
+  margin-top: -50px;
+}
+
+.section-details-content {
+  margin-top: -210px;
+  min-height: 100vh;
+}
+
+.section-details-content .card-details {
+  padding: 30px;
+  border-radius: 11px;
+}
+
+.section-details-content .card-details h1 {
+  font-size: 26px;
+  color: #0b0e40;
+}
+
+.section-details-content .card-details h2 {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.section-details-content .card-details p {
+  font-size: 18px;
+  color: #b1b1b1;
+}
+
+.section-details-content .card-details .trip-informations th {
+  font-weight: 300;
+  font-size: 18px;
+  color: #0b0e40;
+  padding-bottom: 10px;
+}
+
+.section-details-content .card-details .trip-informations td {
+  font-weight: 300;
+  font-size: 18px;
+  color: #faa600;
+  padding-bottom: 10px;
+}
+
+.section-details-content img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.section-details-content .card-right h2 {
+  font-weight: 600;
+  color: #0b0e40;
+}
+
+/* MOBILE VERSION */
+@media (max-width: 992px) {
+  /* css untuk mobile version */
+  .jumbotron.main {
+    background-image: url("../img/bg-3.png");
+    background-position: center;
+  }
+
+  .jumbotron.main .container {
+    margin-top: 60px;
+  }
+
+  .jumbotron.main .display-3 {
+    font-size: 50px;
+  }
+
+  .about p {
+    font-size: 15px;
+  }
+
+  .jumbotron.banner .text {
+    font-size: 25px;
+  }
+}
