@@ -27,7 +27,7 @@
         </div>
     </form>
 
-    <p class="d-flex justify-content-center">Tidak memiliki akun? <a class="pl-1" href="#"> Daftar Sekarang!</a></p>
+    <p class="d-flex justify-content-center">Tidak memiliki akun? <a class="pl-1" href="{{ url('/register') }}"> Daftar Sekarang!</a></p>
     </div>
 </section>
 <!-- AKHIR FORM -->
