@@ -27,6 +27,7 @@ Route::prefix('admin')
   ->group(function() {
       Route::get('/', 'DashboardController@index')->name('admin-dashboard');
       Route::resource('user', 'UserController');
+      Route::resource('lomba', 'LombaController');
   });
 
 Auth::routes();
