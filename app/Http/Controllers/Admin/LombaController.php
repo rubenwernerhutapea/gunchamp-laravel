@@ -29,16 +29,16 @@ class LombaController extends Controller
                 ->addColumn('action', function ($item) {
                     return '
                         <div class="btn-group">
-                                    <a class="btn-secondary" href="' . route('lomba.edit', $item->id) . '">
-                                        Sunting
-                                    </a>
-                                    <form action="' . route('lomba.destroy', $item->id) . '" method="POST">
-                                        ' . method_field('delete') . csrf_field() . '
-                                        <button type="submit" class="btn-danger">
-                                            Hapus
-                                        </button>
-                                    </form>
-                    </div>';
+                            <a class="btn btn-info btn-sm mr-2" style="padding: 0.375rem 0.75rem;font-size: 0.875rem;margin-right:3px" href="' . route('lomba.edit', $item->id) . '">
+                                Edit
+                            </a>
+                            <form action="' . route('lomba.destroy', $item->id) . '" method="POST">
+                                ' . method_field('delete') . csrf_field() . '
+                                <button type="submit" class="btn btn-danger">
+                                    Hapus
+                                </button>
+                            </form>
+                        </div>';
                 })
                 ->editColumn('poster', function ($item) {
                     return $item->poster ? '<img src="' . Storage::url($item->poster) . '" style="max-height: 100px;"/>' : '';

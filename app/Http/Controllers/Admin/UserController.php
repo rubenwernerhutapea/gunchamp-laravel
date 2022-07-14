@@ -28,12 +28,12 @@ class UserController extends Controller
                 ->addColumn('action', function ($item) {
                     return '
                         <div class="btn-group">
-                                    <a class="btn-secondary" href="' . route('user.edit', $item->id) . '">
-                                        Sunting
+                                    <a class="btn btn-info btn-sm mr-2" style="padding: 0.375rem 0.75rem;font-size: 0.875rem;margin-right:3px" href="' . route('user.edit', $item->id) . '">
+                                        Edit
                                     </a>
                                     <form action="' . route('user.destroy', $item->id) . '" method="POST">
                                         ' . method_field('delete') . csrf_field() . '
-                                        <button type="submit" class="btn-danger">
+                                        <button type="submit" class="btn btn-danger">
                                             Hapus
                                         </button>
                                     </form>
