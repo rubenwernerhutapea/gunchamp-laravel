@@ -23,6 +23,7 @@ class CreateCompetitionsTable extends Migration
             $table->string('registration_fee');
             $table->string('registration_link');
             $table->string('categories');
+            $table->string('slug');
             $table->softDeletes();
             $table->timestamps();
         });

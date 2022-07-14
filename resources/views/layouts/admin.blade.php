@@ -17,8 +17,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/backend/img/logo-white.png" />
 
     <!-- Custom CSS -->
+    @stack('prepend-style')
     <link href="/backend/css/style.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/backend/css/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.12.1/datatables.min.css"/>
+    {{-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.css"/> --}}
+    @stack('addon-style')
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -83,13 +87,13 @@
             <ul id="sidebarnav">
               <!-- User Profile-->
               <li class="sidebar-item pt-2">
-                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="dashboard-admin.html" aria-expanded="false">
+                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('admin-dashboard') }}" aria-expanded="false">
                   <i class="far fa-clock" aria-hidden="true"></i>
                   <span class="hide-menu">Dashboard</span>
                 </a>
               </li>
               <li class="sidebar-item">
-                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="dbase-user.html" aria-expanded="false">
+                <a class="sidebar-link waves-effect waves-dark sidebar-link {{ (request()->is('admin/user*')) ? 'active' : '' }}" href="{{ route('user.index') }}" aria-expanded="false">
                   <i class="fa fa-user" aria-hidden="true"></i>
                   <span class="hide-menu">Database User</span>
                 </a>
@@ -126,9 +130,15 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
+    @stack('prepend-script')
     <script src="/backend/plugins/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="/backend/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.12.1/datatables.min.js"></script>
+    {{-- <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.js"></script> --}}
+    <script>
+      $("#datatable").DataTable();
+    </script>
     <script src="/backend/js/app-style-switcher.js"></script>
     <script src="/backend/plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
     <!--Wave Effects -->
@@ -142,5 +152,12 @@
     <script src="/backend/plugins/bower_components/chartist/dist/chartist.min.js"></script>
     <script src="/backend/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
     <script src="/backend/js/pages/dashboards/dashboard1.js"></script>
+    <script>
+      $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+      });
+    </script>
+    @stack('addon-script')
   </body>
 </html>
