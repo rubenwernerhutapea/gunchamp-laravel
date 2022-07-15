@@ -181,7 +181,7 @@ section.lomba {
 
 .lomba .card img {
     height: 250px;
-    background-image: url("../img/lomba/poster2_workshop.jpg");
+    /* background-image: url("../img/lomba/poster2_workshop.jpg"); */
     background-size: cover;
     background-position: center;
 }

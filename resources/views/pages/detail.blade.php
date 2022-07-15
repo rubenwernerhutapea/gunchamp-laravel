@@ -17,14 +17,13 @@
       <div class="row">
         <div class="col-lg-7 pl-lg-0">
           <div class="card card-details">
-            <h1 class="font-weight-bold">Capture The Flag</h1>
-            <p>Technofair 9.0</p>
-            <img src="/img/lomba/poster2_workshop.jpg" class="xzoom" id="xzoom-default" xoriginal="img/lomba/poster2_workshop.jpg" />
+            <h1 class="font-weight-bold">{{ $lomba->name }}</h1>
+            <p>{{ $lomba->user->name }}</p>
+            <img src="{{ Storage::url($lomba->poster) }}" class="xzoom" id="xzoom-default" xoriginal="{{ Storage::url($lomba->poster) }}" />
             <h2 class="font-weight-bold">Deskripsi</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, nihil! Eveniet ea laboriosam vel, libero quod illum corrupti non adipisci necessitatibus modi dolorum ab pariatur distinctio porro aliquam id culpa!
+              {!! $lomba->description !!}
             </p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa dolorem qui fugit iste eius earum praesentium, maxime assumenda suscipit consequuntur.</p>
           </div>
         </div>
 
@@ -35,23 +34,23 @@
             <table class="trip-informations">
               <tr>
                 <th width="50%">Periode Pendaftaran</th>
-                <td width="50%" class="text-right">25 April - 12 Mei 2022</td>
+                <td width="50%" class="text-right">{{ $lomba->registration_period }}</td>
               </tr>
               <tr>
                 <th width="50%">Biaya Pendaftaran</th>
-                <td width="50%" class="text-right">25.000</td>
+                <td width="50%" class="text-right">{{ $lomba->registration_fee }}</td>
               </tr>
               <tr>
                 <th width="50%">Link Pendaftaran</th>
-                <td width="50%" class="text-right">www.technofair.id</td>
+                <td width="50%" class="text-right">{{ $lomba->registration_link }}</td>
               </tr>
               <tr>
                 <th width="50%">Taget Peserta</th>
-                <td width="50%" class="text-right">Umum</td>
+                <td width="50%" class="text-right">{{ $lomba->categories }}</td>
               </tr>
               <tr>
                 <th width="50%">Narahubung</th>
-                <td width="50%" class="text-right">08123456789</td>
+                <td width="50%" class="text-right">{{ $lomba->user->telepon }}</td>
               </tr>
               <tr>
                 <th width="50%">Social Media</th>
