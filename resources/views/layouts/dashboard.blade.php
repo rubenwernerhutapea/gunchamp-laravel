@@ -92,19 +92,22 @@
                 </a>
               </li>
               <li class="sidebar-item">
-                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('profile') }}" aria-expanded="false">
+                <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('dashboard-profile') }}" aria-expanded="false">
                   <i class="fa fa-user" aria-hidden="true"></i>
                   <span class="hide-menu">Profil</span>
                 </a>
               </li>
               <li class="sidebar-item">
-                <a class="sidebar-link waves-effect waves-dark sidebar-link sidebar-link-active" href="{{ route('lomba') }}" aria-expanded="false">
+                <a class="sidebar-link waves-effect waves-dark sidebar-link sidebar-link-active" href="{{ route('dashboard-lomba') }}" aria-expanded="false">
                   <i class="fa fa-table" aria-hidden="true"></i>
                   <span class="hide-menu">Lomba Saya</span>
                 </a>
               </li>
               <li class="text-center p-20 upgrade-btn">
-                <a href="{{ route('home') }}" class="btn d-grid btn-danger text-white" target="_blank">Keluar</a>
+                <a href="{{ route('home') }}" class="btn d-grid btn-danger text-white" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Keluar</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
               </li>
             </ul>
           </nav>
