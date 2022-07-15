@@ -9,21 +9,34 @@
 <section class="login-form" id="login-form">
     <div class="container">
     <h4 class="d-flex justify-content-center py-3">Masuk Akun</h4>
-    <form action="">
+    <form method="POST" action="{{ route('login') }}">
+        @csrf
         <div class="user-details">
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="text" class="form-control" id="email" placeholder="Masukkan email" required="" />
+            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" placeholder="masukkan email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+
+            @error('email')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
         </div>
 
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Masukkan password" required="" />
+            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" placeholder="Masukkan password" name="password" required autocomplete="current-password">
+
+            @error('password')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
         </div>
         </div>
 
         <div class="button">
-        <button type="button" class="btn btn-warning">Masuk</button>
+        <button type="submit" class="btn btn-warning">Masuk</button>
         </div>
     </form>
 

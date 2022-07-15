@@ -15,7 +15,6 @@
           background-size: cover;
           background-position: center;
           color: #0b0e40;
-          /* max-width: 600px; */
       }
 
       form .button {
