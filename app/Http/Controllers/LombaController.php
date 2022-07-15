@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Competition;
+
 class LombaController extends Controller
 {
     /**
@@ -13,6 +15,10 @@ class LombaController extends Controller
      */
     public function index()
     {
-        return view('pages.lomba');
+        $lomba = Competition::paginate(16);
+
+        return view('pages.lomba', [
+            'lomba' => $lomba
+        ]);
     }
 }
