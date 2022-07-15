@@ -16,11 +16,6 @@
           background-position: center;
           color: #0b0e40;
       }
-
-      form .button {
-    height: 45px;
-    margin: 10px 0 20px;
-}
     </style>
 
     {{-- stylesheet --}}

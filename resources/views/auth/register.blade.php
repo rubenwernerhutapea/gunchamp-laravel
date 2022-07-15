@@ -9,35 +9,66 @@
 <section class="login-form" id="login-form">
     <div class="container">
     <h4 class="d-flex justify-content-center py-3">Daftar Akun</h4>
-    <form action="">
+    <form method="POST" action="{{ route('register') }}">
+        @csrf
         <div class="row user-details">
         <div class="form-group col-lg-6 col-md-6 col-sm-12">
-            <label for="name-user">Nama Instansi</label>
-            <input type="text" class="form-control" id="name-user" placeholder="Masukkan nama instansi" required="" />
+            <label for="name">Nama Instansi</label>
+            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="Masukkan nama instansi" required autocomplete="name" autofocus>
+
+            @error('name')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
         </div>
 
         <div class="form-group col-lg-6 col-md-6 col-sm-12">
-            <label for="phone-num">Nomor Telepon</label>
-            <input type="text" class="form-control" id="phone-num" placeholder="Masukkan nomor telepon" required="" />
+            <label for="telepon">Nomor Telepon</label>
+            <input id="telepon" type="text" class="form-control @error('telepon') is-invalid @enderror" name="telepon" value="{{ old('telepon') }}" placeholder="Masukkan Nomor" required autocomplete="telepon" autofocus>
+
+            @error('telepon')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
         </div>
 
         <div class="form-group col-lg-12 col-md-12 col-sm-12">
             <label for="email">Email</label>
-            <input type="text" class="form-control" id="email" placeholder="Masukkan email" required="" />
+            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Masukkan email" required autocomplete="email">
+
+            @error('email')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
         </div>
 
         <div class="form-group col-lg-12 col-md-12 col-sm-12">
             <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Masukkan password" required="" />
+            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Masukkan password" required autocomplete="new-password">
+
+            @error('password')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+        </div>
+
+        <div class="form-group col-lg-12 col-md-12 col-sm-12">
+            <label for="password-confirm">Konfirmasi Password</label>
+
+            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Masukkan konfirmasi password" required autocomplete="new-password">
         </div>
         </div>
 
         <div class="button">
-        <button type="button" class="btn btn-warning">Daftar</button>
+        <button type="submit" class="btn btn-warning">Daftar</button>
         </div>
     </form>
 
-    <p class="d-flex justify-content-center">Sudah memiliki akun? <a class="pl-1" href="{{ url('/login') }}"> Masuk Akun</a></p>
+    <p class="d-flex justify-content-center">Sudah memiliki akun? <a class="pl-1" href="{{ route('login') }}"> Masuk Akun</a></p>
     </div>
 </section>
 <!-- AKHIR FORM -->
