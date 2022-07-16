@@ -66,7 +66,7 @@
               <!-- User profile -->
               <li>
                 <a class="profile-pic" href="#">
-                  <span class="text-white me-2">Halo, Steave</span>
+                  <span class="text-white me-2">Halo, {{ Auth::user()->name }}</span>
                   <img src="/backend/img/logo-circle.png" alt="user-img" width="36" class="img-circle" />
                 </a>
               </li>

@@ -42,32 +42,23 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td width="10%">Capture The Flag Acara yang sangat menarik waw</td>
-                <td>25 April - 12 Mei 2022</td>
-                <td>25.000</td>
-                <td>www.technofair.id</td>
-                <td>Umum</td>
-                <td>Instagram: @technofair</td>
-                <td>
-                  <a href=""><i class="bi bi-pencil-square text-primary"></i></a>
-                  <a href=""><i class="bi bi-trash text-danger"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td width="10%">Smart FIKTI</td>
-                <td>25 April - 12 Mei 2022</td>
-                <td>15.000</td>
-                <td>www.technofair.id</td>
-                <td>FIKTI</td>
-                <td>Instagram: @technofair</td>
-                <td>
-                  <a href=""><i class="bi bi-pencil-square text-primary"></i></a>
-                  <a href=""><i class="bi bi-trash text-danger"></i></a>
-                </td>
-              </tr>
+              <?php $i=1; ?>
+              @foreach ($lomba as $lomb)
+                <tr>
+                  <td><?= $i; ?></td>
+                  <td width="10%">{{ $lomb->name }}</td>
+                  <td>{{ $lomb->registration_period }}</td>
+                  <td>{{ $lomb->registration_fee }}</td>
+                  <td>{{ $lomb->registration_link }}id</td>
+                  <td>{{ $lomb->categories }}</td>
+                  <td>Instagram: @technofair</td>
+                  <td>
+                    <a href=""><i class="bi bi-pencil-square text-primary"></i></a>
+                    <a href=""><i class="bi bi-trash text-danger"></i></a>
+                  </td>
+                </tr>
+                <?php $i++; ?>
+              @endforeach
             </tbody>
           </table>
         </div>

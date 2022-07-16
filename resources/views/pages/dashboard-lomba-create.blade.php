@@ -20,33 +20,35 @@
 <div class="container-fluid">
   <!-- Start Page Content -->
   <div class="row white-box">
-    <form action="">
+    <form action="{{ route('dashboard-lomba-store') }}" method="POST" enctype="multipart/form-data">
+      @csrf
+      <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
       <div class="form-group row">
-        <label for="name-comp" class="col-sm-2 col-form-label">Nama Lomba</label>
+        <label for="name" class="col-sm-2 col-form-label">Nama Lomba</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="name-comp" placeholder="Masukkan nama lomba..." />
+          <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan nama lomba..." />
         </div>
       </div>
 
       <div class="form-group row">
-        <label for="regist-period" class="col-sm-2 col-form-label pt-0">Periode Pendaftaran</label>
+        <label for="registration_period" class="col-sm-2 col-form-label pt-0">Periode Pendaftaran</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="regist-period" placeholder="Masukkan periode tanggal pendaftaran..." required="" />
+          <input type="text" class="form-control" id="registration_period" name="registration_period" placeholder="Masukkan periode tanggal pendaftaran..." required="" />
         </div>
       </div>
 
       <div class="form-group row">
-        <label for="regist-fee" class="col-sm-2 col-form-label">Biaya Pendaftaran</label>
+        <label for="registration_fee" class="col-sm-2 col-form-label">Biaya Pendaftaran</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="regist-fee" placeholder="Masukkan biaya pendaftaran..." required="" />
+          <input type="text" class="form-control" id="registration_fee" name="registration_fee" placeholder="Masukkan biaya pendaftaran..." required="" />
           <small id="registFee" class="form-text text-muted">*Isi dengan angka '0' jika tidak ada biaya pendaftaran.</small>
         </div>
       </div>
 
       <div class="form-group row">
-        <label for="regist-link" class="col-sm-2 col-form-label">Link Pendaftaran</label>
+        <label for="registration_link" class="col-sm-2 col-form-label">Link Pendaftaran</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="regist-link" placeholder="Masukkan link pendaftaran..." required="" />
+          <input type="text" class="form-control" id="registration_link" name="registration_link" placeholder="Masukkan link pendaftaran..." required="" />
           <small id="registLink" class="form-text text-muted">*Harap gunakan link yang sudah dipendekkan.</small>
         </div>
       </div>
@@ -54,41 +56,41 @@
       <div class="form-group row">
         <label for="categories" class="col-sm-2 col-form-label">Target Peserta</label>
         <div class="col-sm-10">
-          <select class="form-select" id="categories">
+          <select class="form-select" name="categories" id="categories">
             <option selected>Choose...</option>
-            <option value="1">FIKTI</option>
-            <option value="2">FTI</option>
-            <option value="3">FE</option>
-            <option value="4">FTSP</option>
-            <option value="5">FPSI</option>
-            <option value="6">FSB</option>
-            <option value="7">FIKOM</option>
-            <option value="8">FK</option>
-            <option value="9">D3BK</option>
-            <option value="10">Mahasiswa Gunadarma</option>
-            <option value="11">Umum</option>
+            <option value="FIKTI">FIKTI</option>
+            <option value="FTI">FTI</option>
+            <option value="FE">FE</option>
+            <option value="FTSP">FTSP</option>
+            <option value="FPSI">FPSI</option>
+            <option value="FSB">FSB</option>
+            <option value="FIKOM">FIKOM</option>
+            <option value="FK">FK</option>
+            <option value="D3BK">D3BK</option>
+            <option value="Mahasiswa Gunadarma">Mahasiswa Gunadarma</option>
+            <option value="Umum">Umum</option>
           </select>
         </div>
       </div>
 
-      <div class="form-group row">
+      {{-- <div class="form-group row">
         <label for="social-media" class="col-sm-2 col-form-label">Social Media</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="social-media" placeholder="Masukkan social media..." required="" />
+          <input type="text" class="form-control" id="social-media" name="social-media" placeholder="Masukkan social media..." required="" />
         </div>
-      </div>
+      </div> --}}
 
       <div class="form-group row">
         <label for="poster" class="col-sm-2 col-form-label">Poster Acara</label>
         <div class="col-sm-10">
-          <input type="file" class="form-control-file" id="poster" required="" />
+          <input type="file" class="form-control-file" name="poster" id="poster" required="" />
         </div>
       </div>
 
       <div class="form-group row">
-        <label for="desc" class="col-sm-2 col-form-label pt-0">Deskripsi Singkat Lomba</label>
+        <label for="description" class="col-sm-2 col-form-label pt-0">Deskripsi Singkat Lomba</label>
         <div class="col-sm-10">
-          <textarea class="form-control" id="desc" rows="3" placeholder="Deskripsikan secara singkat mengenai lombamu..."></textarea>
+          <textarea class="form-control" id="editor" name="description" rows="3" placeholder="Deskripsikan secara singkat mengenai lombamu..."></textarea>
         </div>
       </div>
 

@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+use App\User;
+use App\Competition;
 
 class DashboardController extends Controller
 {
@@ -13,6 +17,8 @@ class DashboardController extends Controller
      */
     public function index()
     {
+        // $user = User::where('name', $id);
+
         return view('pages.dashboard');
     }
 }
