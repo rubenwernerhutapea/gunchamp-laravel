@@ -23,6 +23,7 @@ Route::group(['middleware' => ['auth']], function() {
   Route::get('/dashboard/profile', 'DashboardProfileController@index')->name('dashboard-profile');
   Route::get('/dashboard/lomba', 'DashboardLombaController@index')->name('dashboard-lomba');
   Route::get('/dashboard/lomba/add', 'DashboardLombaController@create')->name('tambah-lomba');
+  Route::post('/dashboard/lomba', 'DashboardLombaController@store')->name('dashboard-lomba-store');
 });
 
 Route::prefix('admin')
