@@ -53,8 +53,8 @@
                   <td>{{ $lomb->categories }}</td>
                   <td>Instagram: @technofair</td>
                   <td>
-                    <a href=""><i class="bi bi-pencil-square text-primary"></i></a>
-                    <a href=""><i class="bi bi-trash text-danger"></i></a>
+                    <a href="{{ route('edit-lomba', $lomb->id) }}"><i class="bi bi-pencil-square text-primary"></i></a>
+                    <a href="{{ route('dashboard-lomba-delete', $lomb->id) }}"><i class="bi bi-trash text-danger"></i></a>
                   </td>
                 </tr>
                 <?php $i++; ?>
