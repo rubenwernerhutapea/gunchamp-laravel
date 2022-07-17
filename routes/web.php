@@ -20,6 +20,8 @@ Route::get('/lomba/details/{id?}', 'DetailController@index')->name('detail');
 
 Route::group(['middleware' => ['auth']], function() {
   Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+  Route::post('/dashboard/profile/{redirect}', 'DashboardProfileController@update')->name('dashboard-profile-redirect');
+  Route::patch('/dashboard/profile/{redirect}', 'DashboardProfileController@updatePassword')->name('dashboard-profile-redirect-password');
   Route::get('/dashboard/profile', 'DashboardProfileController@index')->name('dashboard-profile');
   Route::get('/dashboard/lomba', 'DashboardLombaController@index')->name('dashboard-lomba');
   Route::get('/dashboard/lomba/add', 'DashboardLombaController@create')->name('tambah-lomba');

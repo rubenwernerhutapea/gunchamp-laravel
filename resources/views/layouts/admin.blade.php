@@ -105,7 +105,10 @@
                 </a>
               </li>
               <li class="text-center p-20 upgrade-btn">
-                <a href="{{ route('home') }}" class="btn d-grid btn-danger text-white">Keluar</a>
+                <a href="{{ route('home') }}" class="btn d-grid btn-danger text-white" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Keluar</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
               </li>
             </ul>
           </nav>
