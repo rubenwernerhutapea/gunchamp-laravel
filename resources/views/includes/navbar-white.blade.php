@@ -31,6 +31,10 @@
                 </a>
                 <div class="dropdown-menu">
                     <a href="{{ route('dashboard') }}" class="dropdown-item">Dashboard</a>
+                    @if (Auth()->user()->roles == 'ADMIN')
+                      <div class="dropdown-divider"></div>
+                      <a href="{{ route('admin-dashboard') }}" class="dropdown-item">Admin</a>
+                    @endif
                     </div>
             </li>
         </ul>
