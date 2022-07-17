@@ -60,6 +60,9 @@ class DashboardLombaController extends Controller
         $data['slug'] = Str::slug($request->name);
 
         if ($request->file('poster')) {
+            if($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
             $data['poster'] = $request->file('poster')->store('assets/lomba', 'public');
         }
         

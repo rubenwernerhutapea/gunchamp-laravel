@@ -91,6 +91,7 @@
 
       <div class="form-group row">
         <label for="poster" class="col-sm-2 col-form-label">Poster Acara</label>
+        <input type="hidden" name="oldImage" value="{{ $item->poster }}">
         <div class="col-sm-10">
           <input type="file" class="form-control-file" name="poster" id="poster" value="{{ $item->poster }}"/>
         </div>
@@ -119,3 +120,14 @@
 <!-- End Container fluid  -->
 </div>
 @endsection
+
+@push('addon-script')
+  <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
+  <script>
+      ClassicEditor
+          .create( document.querySelector( '#editor' ) )
+          .catch( error => {
+              console.error( error );
+          } );
+  </script>
+@endpush

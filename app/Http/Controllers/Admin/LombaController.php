@@ -124,7 +124,13 @@ class LombaController extends Controller
         $item = Competition::findOrFail($id);
 
         $data['slug'] = Str::slug($request->name);
-        $data['poster'] = $request->file('poster')->store('assets/lomba', 'public');
+
+        if ($request->file('poster')) {
+            if($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
+            $data['poster'] = $request->file('poster')->store('assets/lomba', 'public');
+        }
 
         $item->update($data);
 

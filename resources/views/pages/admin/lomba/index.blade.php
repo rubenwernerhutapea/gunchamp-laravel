@@ -34,12 +34,12 @@
                                         <th>ID</th>
                                         <th>Nama</th>
                                         <th>Pemilik</th>
+                                        <th>Periode Pendaftaran</th>
+                                        <th>Biaya Pendaftaran</th>
+                                        <th>Link Pendaftaran</th>
+                                        <th>Target Peserta</th>
                                         <th>Poster</th>
-                                        <th>Kategori</th>
                                         <th>Deskripsi</th>
-                                        <th>periode pendaftaran</th>
-                                        <th>harga pendaftaran</th>
-                                        <th>link pendaftaran</th>
                                         <th>Aksi</th>
                                     </tr>
                                     </thead>
@@ -69,12 +69,12 @@
               { data: 'id', name: 'id' },
               { data: 'name', name: 'name' },
               { data: 'user.name', name: 'user.name' },
-              { data: 'poster', name: 'poster' },
-              { data: 'categories', name: 'categories' },
-              { data: 'description', name: 'description' },
               { data: 'registration_period', name: 'registration_period' },
               { data: 'registration_fee', name: 'registration_fee' },
               { data: 'registration_link', name: 'registration_link' },
+              { data: 'categories', name: 'categories' },
+              { data: 'poster', name: 'poster' },
+              { data: 'description', name: 'description' },
               {
                   data: 'action',
                   name: 'action',

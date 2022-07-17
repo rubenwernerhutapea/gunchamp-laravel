@@ -116,3 +116,14 @@
 <!-- End Container fluid  -->
 </div>
 @endsection
+
+@push('addon-script')
+  <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
+  <script>
+      ClassicEditor
+          .create( document.querySelector( '#editor' ) )
+          .catch( error => {
+              console.error( error );
+          } );
+  </script>
+@endpush

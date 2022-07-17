@@ -1,7 +1,7 @@
 @extends('layouts.app-details')
 
 @section('name')
-  Gunchamp
+  Gunchamp | Detail
 @endsection
 
 @section('content')

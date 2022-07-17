@@ -12,4 +12,4 @@
 -->
 
 <!-- MY JAVASCRIPT -->
-<script src="{{ url('/script/script.js') }}"></script>
+<script src="{{ url('/frontend/script/script.js') }}"></script>

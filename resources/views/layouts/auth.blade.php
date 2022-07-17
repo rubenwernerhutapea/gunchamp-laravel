@@ -29,7 +29,7 @@
   </head>
   <body>
     {{-- navbar --}}
-    @include('includes.navbar')
+    @include('includes.navbar-auth')
 
     {{-- page content --}}
     @yield('content')

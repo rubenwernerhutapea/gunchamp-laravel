@@ -56,8 +56,20 @@
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Poster</label>
-                      <input type="file" class="form-control" name="poster" placeholder="poster"/>
+                      <label>Periode pendaftaran</label>
+                      <input type="text" class="form-control" name="registration_period" value="{{ $item->registration_period }}" required />
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label>Harga Pendaftaran</label>
+                      <input type="text" class="form-control" name="registration_fee" value="{{ $item->registration_fee}}" required />
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label>Link Pendaftaran</label>
+                      <input type="text" class="form-control" name="registration_link" value="{{ $item->registration_link }}" required />
                     </div>
                   </div>
                   <div class="col-md-12">
@@ -77,26 +89,18 @@
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
+                      <label>Poster</label>
+                      <input type="hidden" name="oldImage" value="{{ $item->poster }}">
+                      <input type="file" class="form-control" name="poster" placeholder="poster"/>
+                    </div>
+                    <div class="col-md-12">
+                      <img src="{{ Storage::url($item->poster) }}" height="100px" width="100px" alt="">
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
                       <label>Deskripsi</label>
                       <textarea name="description" id="editor">{!! $item->description !!}</textarea>
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <label>Periode pendaftaran</label>
-                      <input type="text" class="form-control" name="registration_period" value="{{ $item->registration_period }}" required />
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <label>Harga Pendaftaran</label>
-                      <input type="text" class="form-control" name="registration_fee" value="{{ $item->registration_fee}}" required />
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <label>Link Pendaftaran</label>
-                      <input type="text" class="form-control" name="registration_link" value="{{ $item->registration_link }}" required />
                     </div>
                   </div>
                 </div>

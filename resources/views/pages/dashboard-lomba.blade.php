@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('name')
-  Dashboard
+  Lomba Saya
 @endsection
 
 @section('content')
