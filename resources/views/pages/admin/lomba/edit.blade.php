@@ -89,13 +89,28 @@
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Poster</label>
-                      <input type="hidden" name="oldImage" value="{{ $item->poster }}">
+                      <label>Sosial Media</label>
+                      <input type="text" class="form-control" name="sosmed" value="{{ $item->sosmed }}" required />
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="poster">Poster</label>
+                      {{-- <input type="hidden" name="oldImage" value="{{ $item->poster }}"> --}}
+                      @if ($item->poster)
+                        <div class="col-md-12">
+                          <img src="{{ Storage::url($item->poster) }}" height="100px" width="100px" alt="">
+                        </div>
+                      @else
+                        <div class="col-md-12">
+                          <img height="100px" width="100px" alt="">
+                        </div>
+                      @endif
                       <input type="file" class="form-control" name="poster" placeholder="poster"/>
                     </div>
-                    <div class="col-md-12">
+                    {{-- <div class="col-md-12">
                       <img src="{{ Storage::url($item->poster) }}" height="100px" width="100px" alt="">
-                    </div>
+                    </div> --}}
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">

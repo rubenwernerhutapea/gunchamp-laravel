@@ -54,7 +54,7 @@
               </tr>
               <tr>
                 <th width="50%">Social Media</th>
-                <td width="50%" class="text-right">Instagram: @technofair</td>
+                <td width="50%" class="text-right">{{ $lomba->sosmed }}</td>
               </tr>
             </table>
           </div>

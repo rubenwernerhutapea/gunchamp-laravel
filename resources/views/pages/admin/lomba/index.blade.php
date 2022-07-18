@@ -38,8 +38,9 @@
                                         <th>Biaya Pendaftaran</th>
                                         <th>Link Pendaftaran</th>
                                         <th>Target Peserta</th>
+                                        <th>Sosial Media</th>
                                         <th>Poster</th>
-                                        <th>Deskripsi</th>
+                                        {{-- <th>Deskripsi</th> --}}
                                         <th>Aksi</th>
                                     </tr>
                                     </thead>
@@ -73,8 +74,9 @@
               { data: 'registration_fee', name: 'registration_fee' },
               { data: 'registration_link', name: 'registration_link' },
               { data: 'categories', name: 'categories' },
+              { data: 'sosmed', name: 'sosmed' },
               { data: 'poster', name: 'poster' },
-              { data: 'description', name: 'description' },
+              // { data: 'description', name: 'description' },
               {
                   data: 'action',
                   name: 'action',

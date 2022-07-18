@@ -10,7 +10,7 @@ class Competition extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'user_id', 'name', 'poster', 'description', 'registration_period', 'registration_fee', 'registration_link', 'categories', 'slug'
+        'user_id', 'name', 'poster', 'description', 'registration_period', 'registration_fee', 'registration_link', 'categories', 'slug', 'sosmed'
     ];
 
     protected $hidden = [

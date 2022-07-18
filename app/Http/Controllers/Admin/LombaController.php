@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-use App\Competition;
 use App\User;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use App\Competition;
 use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\File;
 
-use App\Http\Requests\Admin\LombaRequest;
+use Illuminate\Support\Facades\Storage;
 
 use Yajra\DataTables\Facades\DataTables;
+use App\Http\Requests\Admin\LombaRequest;
 
 class LombaController extends Controller
 {
@@ -126,11 +127,17 @@ class LombaController extends Controller
         $data['slug'] = Str::slug($request->name);
 
         if ($request->file('poster')) {
-            if($request->oldImage) {
-                Storage::delete($request->oldImage);
-            }
             $data['poster'] = $request->file('poster')->store('assets/lomba', 'public');
         }
+
+        // if (request()->hasFile('poster') && request('poster') != '') {
+        //     $imagePath = public_path('assets/lomba'.$request->poster);
+        //     if(Storage::exists($imagePath)) {
+        //         Storage::delete($imagePath);
+        //     }
+        //     $poster = $request->file('poster')->store('assets/lomba', 'public');
+        //     $data['poster'] = $poster;
+        // }
 
         $item->update($data);
 

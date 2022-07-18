@@ -91,6 +91,12 @@
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
+                      <label>Sosial Media</label>
+                      <input type="text" class="form-control" name="sosmed" required />
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
                       <label>Poster</label>
                       <input type="file" class="form-control" name="poster" placeholder="poster" required/>
                     </div>
