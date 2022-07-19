@@ -3,7 +3,7 @@
       <div class="container">
         <div class="row py-4 justify-content-center">
           <div class="col-md-3">
-            <a href="{{ route('home') }}" class="logo"><img src="img/logo-white.png" height="50" /></a>
+            <a href="{{ route('home') }}" class="logo"><img src="{{ url('/frontend/img/logo-white.png') }}" height="50" /></a>
             <p class="pt-3">Kami akan selalu memberikan yang terbaik untuk para champions Universitas Gunadarma.</p>
             <div class="sosmed">
               <a href="#"><i class="bi bi-facebook px-3 text-white"></i></a>

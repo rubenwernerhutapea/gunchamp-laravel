@@ -82,12 +82,12 @@
         </div>
       </div>
 
-      {{-- <div class="form-group row">
-        <label for="social-media" class="col-sm-2 col-form-label">Social Media</label>
+      <div class="form-group row">
+        <label for="sosmed" class="col-sm-2 col-form-label">Social Media</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="social-media" name="social-media" placeholder="Masukkan social media..." required="" />
+          <input type="text" class="form-control" id="sosmed" name="sosmed" placeholder="Masukkan social media..." required="" />
         </div>
-      </div> --}}
+      </div>
 
       <div class="form-group row">
         <label for="poster" class="col-sm-2 col-form-label">Poster Acara</label>
@@ -116,3 +116,14 @@
 <!-- End Container fluid  -->
 </div>
 @endsection
+
+@push('addon-script')
+  <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
+  <script>
+      ClassicEditor
+          .create( document.querySelector( '#editor' ) )
+          .catch( error => {
+              console.error( error );
+          } );
+  </script>
+@endpush

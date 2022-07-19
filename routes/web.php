@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/lomba', 'LombaController@index')->name('lomba');
-Route::get('/lomba/details/{id?}', 'DetailController@index')->name('detail');
+Route::get('/competitions', 'LombaController@index')->name('lomba');
+Route::get('/competitions/details/{id?}', 'DetailController@index')->name('detail');
 
 Route::group(['middleware' => ['auth']], function() {
   Route::get('/dashboard', 'DashboardController@index')->name('dashboard');

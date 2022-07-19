@@ -1,7 +1,7 @@
 @extends('layouts.app-lomba')
 
 @section('name')
-  Lomba
+  competitions
 @endsection
 
 @section('content')
@@ -19,19 +19,19 @@
 <section class="lomba mb-4" id="lomba">
   <div class="container">
     <div class="row justify-content-center">
-      @forelse ($lomba as $lomb)
+      @forelse ($competitions as $competition)
         <div class="col-lg-3 col-lg-3 col-md-4 mb-3">
           <div class="card h-100">
-            <img class="card-img-top" style="background-image: url('{{ Storage::url($lomb->poster) }}')"/>
+            <img class="card-img-top" style="background-image: url('{{ Storage::url($competition->poster) }}')"/>
             <div class="card-body pb-0">
-              <h5 class="font-weight-bold">{{ $lomb->name }}</h5>
-              <p class="mb-0">{{ $lomb->user->name }}</p>
-              <p class="mb-2">{{ $lomb->registration_period  }}</p>
+              <h5 class="font-weight-bold">{{ $competition->name }}</h5>
+              <p class="mb-0">{{ $competition->user->name }}</p>
+              <p class="mb-2">{{ $competition->registration_period  }}</p>
             </div>
             <div class="card-footer pt-0 pb-4">
-              <a class="btn btn-outline-warning btn-sm mb-2 rounded-pill btn-category">{{ $lomb->categories }}</a>
+              <a class="btn btn-outline-warning btn-sm mb-2 rounded-pill btn-category">{{ $competition->categories }}</a>
               <br />
-              <a href="{{ route('detail', $lomb->slug) }}" class="btn btn-warning btn-sm font-weight-bold rounded-pill">Info Selengkapnya <i class="bi bi-arrow-right"></i></a>
+              <a href="{{ route('detail', $competition->slug) }}" class="btn btn-warning btn-sm font-weight-bold rounded-pill">Info Selengkapnya <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -43,7 +43,7 @@
     </div>
     <div class="row">
       <div class="col-12 mt-4">
-        {{ $lomba->links() }}
+        {{ $competitions->links() }}
       </div>
     </div>
   </div>

@@ -15,10 +15,10 @@ class LombaController extends Controller
      */
     public function index()
     {
-        $lomba = Competition::paginate(16);
+        $competitions = Competition::paginate(16);
 
-        return view('pages.lomba', [
-            'lomba' => $lomba
+        return view('pages.competition', [
+            'competitions' => $competitions
         ]);
     }
 }

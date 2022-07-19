@@ -11,7 +11,7 @@
   <div class="page-breadcrumb bg-white">
     <div class="row align-items-center">
       <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-        <h4 class="page-title">Create Lomba</h4>
+        <h4 class="page-title">Buat Lomba</h4>
       </div>
     </div>
   </div>
@@ -38,7 +38,7 @@
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Nama</label>
+                      <label>Nama Lomba</label>
                       <input type="text" class="form-control" name="name" required />
                     </div>
                   </div>
@@ -54,40 +54,13 @@
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Poster</label>
-                      <input type="file" class="form-control" name="poster" placeholder="poster" required/>
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <label>Kategori</label>
-                      <select name="categories" required class="form-control">
-                          <option value="FIKTI">FIKTI</option>
-                          <option value="FTI">FTI</option>
-                          <option value="FSB">FSB</option>
-                          <option value="FIKOM">FIKOM</option>
-                          <option value="FPSIKOLOGI">FPSIKOLOGI</option>
-                          <option value="D3BK">D3BK</option>
-                          <option value="FTSP">FTSP</option>
-                        </select>
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <label>Deskripsi</label>
-                      <textarea name="description" id="editor"></textarea>
-                      {{-- <div id="editor"></div> --}}
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="form-group">
                       <label>Periode pendaftaran</label>
                       <input type="text" class="form-control" name="registration_period" required />
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Harga Pendaftaran</label>
+                      <label>Biaya Pendaftaran</label>
                       <input type="text" class="form-control" name="registration_fee" required />
                     </div>
                   </div>
@@ -95,6 +68,44 @@
                     <div class="form-group">
                       <label>Link Pendaftaran</label>
                       <input type="text" class="form-control" name="registration_link" required />
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label>Target Peserta</label>
+                      <select name="categories" required class="form-control">
+                          <option selected>Choose...</option>
+                          <option value="FIKTI">FIKTI</option>
+                          <option value="FTI">FTI</option>
+                          <option value="FE">FE</option>
+                          <option value="FTSP">FTSP</option>
+                          <option value="FPSI">FPSI</option>
+                          <option value="FSB">FSB</option>
+                          <option value="FIKOM">FIKOM</option>
+                          <option value="FK">FK</option>
+                          <option value="D3BK">D3BK</option>
+                          <option value="Mahasiswa Gunadarma">Mahasiswa Gunadarma</option>
+                          <option value="Umum">Umum</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label>Sosial Media</label>
+                      <input type="text" class="form-control" name="sosmed" required />
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label>Poster</label>
+                      <input type="file" class="form-control" name="poster" placeholder="poster" required/>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label>Deskripsi</label>
+                      <textarea name="description" id="editor"></textarea>
+                      {{-- <div id="editor"></div> --}}
                     </div>
                   </div>
                 </div>

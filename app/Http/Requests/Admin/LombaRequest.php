@@ -32,6 +32,7 @@ class LombaRequest extends FormRequest
             'registration_fee' => 'required',
             'registration_link' => 'required',
             'categories' => 'required|in:FIKTI,FTI,FSB,FIKOM,FPSIKOLOGI,D3BK,FTSP',
+            'sosmed' => 'required',
         ];
     }
 }

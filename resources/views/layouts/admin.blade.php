@@ -14,12 +14,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="/backend/img/logo-white.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url('/backend/img/logo-white.png') }}" />
 
     <!-- Custom CSS -->
     @stack('prepend-style')
-    <link href="/backend/css/style.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/backend/css/mystyle.css" />
+    <link href="{{ url('/backend/css/style.min.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url('/backend/css/mystyle.css') }}" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.12.1/datatables.min.css"/>
     {{-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.css"/> --}}
     @stack('addon-style')
@@ -44,7 +44,7 @@
               <!-- Logo icon -->
               <b class="logo-icon">
                 <!-- Dark Logo icon -->
-                <img class="m-3" src="/backend/img/logo-title.png" height="30" alt="homepage" />
+                <img class="m-3" src="{{ url('/backend/img/logo-title.png') }}" height="30" alt="homepage" />
               </b>
               <!--End Logo icon -->
             </a>
@@ -68,7 +68,7 @@
               <li>
                 <a class="profile-pic" href="#">
                   <span class="text-white me-2">Halo, Admin</span>
-                  <img src="/backend/img/logo-circle.png" alt="user-img" width="36" class="img-circle" />
+                  <img src="{{ url('/backend/img/logo-circle.png') }}" alt="user-img" width="36" class="img-circle" />
                 </a>
               </li>
               <!-- End User profile -->
@@ -134,27 +134,27 @@
     <!-- All Jquery -->
     <!-- ============================================================== -->
     @stack('prepend-script')
-    <script src="/backend/plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="{{ url('/backend/plugins/bower_components/jquery/dist/jquery.min.js') }}"></script>
     <!-- Bootstrap tether Core JavaScript -->
-    <script src="/backend/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url('/backend/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.12.1/datatables.min.js"></script>
     {{-- <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.js"></script> --}}
     <script>
       $("#datatable").DataTable();
     </script>
-    <script src="/backend/js/app-style-switcher.js"></script>
-    <script src="/backend/plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <script src="{{ url('/backend/js/app-style-switcher.js') }}"></script>
+    <script src="{{ url('/backend/plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js') }}"></script>
     <!--Wave Effects -->
-    <script src="/backend/js/waves.js"></script>
+    <script src="{{ url('/backend/js/waves.js') }}"></script>
     <!--Menu sidebar -->
-    <script src="/backend/js/sidebarmenu.js"></script>
+    <script src="{{ url('/backend/js/sidebarmenu.js') }}"></script>
     <!--Custom JavaScript -->
-    <script src="/backend/js/custom.js"></script>
+    <script src="{{ url('/backend/js/custom.js') }}"></script>
     <!--This page JavaScript -->
     <!--chartis chart-->
-    <script src="/backend/plugins/bower_components/chartist/dist/chartist.min.js"></script>
-    <script src="/backend/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
-    <script src="/backend/js/pages/dashboards/dashboard1.js"></script>
+    <script src="{{ url('/backend/plugins/bower_components/chartist/dist/chartist.min.js') }}"></script>
+    <script src="{{ url('/backend/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js') }}"></script>
+    <script src="{{ url('/backend/js/pages/dashboards/dashboard1.js') }}"></script>
     <script>
       $("#menu-toggle").click(function (e) {
         e.preventDefault();

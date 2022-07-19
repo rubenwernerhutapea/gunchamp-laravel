@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('name')
-  Dashboard
+  Lomba Saya
 @endsection
 
 @section('content')
@@ -51,7 +51,7 @@
                   <td>{{ $lomb->registration_fee }}</td>
                   <td>{{ $lomb->registration_link }}id</td>
                   <td>{{ $lomb->categories }}</td>
-                  <td>Instagram: @technofair</td>
+                  <td>{{ $lomb->sosmed }}</td>
                   <td>
                     <a href="{{ route('edit-lomba', $lomb->id) }}"><i class="bi bi-pencil-square text-primary"></i></a>
                     <a href="{{ route('dashboard-lomba-delete', $lomb->id) }}"><i class="bi bi-trash text-danger"></i></a>
