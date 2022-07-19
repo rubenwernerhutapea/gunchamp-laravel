@@ -6,7 +6,7 @@
 
 @section('content')
 <!-- FORM -->
-<section class="login-form" id="login-form">
+<section class="regist login-form" id="login-form">
     <div class="container">
     <h4 class="d-flex justify-content-center py-3">Daftar Akun</h4>
     <form method="POST" action="{{ route('register') }}">
@@ -25,7 +25,7 @@
 
         <div class="form-group col-lg-6 col-md-6 col-sm-12">
             <label for="telepon">Nomor Telepon</label>
-            <input id="telepon" type="text" class="form-control @error('telepon') is-invalid @enderror" name="telepon" value="{{ old('telepon') }}" placeholder="Masukkan Nomor" required autocomplete="telepon" autofocus>
+            <input id="telepon" type="text" class="form-control @error('telepon') is-invalid @enderror" name="telepon" value="{{ old('telepon') }}" placeholder="Masukkan nomor telepon" required autocomplete="telepon" autofocus>
 
             @error('telepon')
                 <span class="invalid-feedback" role="alert">
@@ -45,7 +45,7 @@
             @enderror
         </div>
 
-        <div class="form-group col-lg-12 col-md-12 col-sm-12">
+        <div class="form-group col-lg-6 col-md-6 col-sm-12">
             <label for="password">Password</label>
             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Masukkan password" required autocomplete="new-password">
 
@@ -56,7 +56,7 @@
             @enderror
         </div>
 
-        <div class="form-group col-lg-12 col-md-12 col-sm-12">
+        <div class="form-group col-lg-6 col-md-6 col-sm-12">
             <label for="password-confirm">Konfirmasi Password</label>
 
             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Masukkan konfirmasi password" required autocomplete="new-password">

@@ -21,12 +21,12 @@
             <li class="nav-item dropdown">
                 <a
                     href="#"
-                    class="nav-link"
+                    class="btn btn-warning tombol"
                     id="navbarDropdown"
                     role="button"
                     data-toggle="dropdown"
                 >
-                    Hi, {{ Auth::user()->name }}
+                    {{ Auth::user()->name }}
                 </a>
                 <div class="dropdown-menu">
                     <a href="{{ route('dashboard') }}" class="dropdown-item">Dashboard</a>

@@ -24,7 +24,7 @@
       <div class="white-box">
         <div class="d-flex justify-content-between mb-3">
           <h3 class="box-title">Daftar Perlombaan Saya</h3>
-          <a href="{{ route('tambah-lomba') }}" class="btn btn-primary">Tambah Lomba</a>
+          <a href="{{ route('tambah-lomba') }}" class="btn btn-primary">+ Tambah Lomba</a>
         </div>
 
         <div class="table-responsive">
@@ -38,7 +38,7 @@
                 <th width="10%" class="border-top-0">Link Pendaftaran</th>
                 <th width="10%" class="border-top-0">Target Peserta</th>
                 <th width="10%" class="border-top-0">Social Media</th>
-                <th width="10%" class="border-top-0">Actions</th>
+                <th width="10%" class="border-top-0">Aksi</th>
               </tr>
             </thead>
             <tbody>
@@ -49,7 +49,7 @@
                   <td width="10%">{{ $lomb->name }}</td>
                   <td>{{ $lomb->registration_period }}</td>
                   <td>{{ $lomb->registration_fee }}</td>
-                  <td>{{ $lomb->registration_link }}id</td>
+                  <td>{{ $lomb->registration_link }}</td>
                   <td>{{ $lomb->categories }}</td>
                   <td>{{ $lomb->sosmed }}</td>
                   <td>
