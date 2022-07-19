@@ -10,7 +10,6 @@
         <div class="collapse navbar-collapse justify-content-sm-end" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-link {{ (request()->is('/*')) ? 'active' : '' }}" href="{{ route('home') }}">Beranda<span class="sr-only">(current)</span></a>
-            <a class="nav-link" href="#about">Tentang</a>
             <a class="nav-link" href="{{ route('lomba') }}">Lomba</a>
             @guest
               <a class="btn btn-outline-light tombol" href="{{ route('login') }}">Masuk</a>
@@ -22,12 +21,12 @@
                 <li class="nav-item dropdown">
                     <a
                         href="#"
-                        class="nav-link"
+                        class="btn btn-warning tombol"
                         id="navbarDropdown"
                         role="button"
                         data-toggle="dropdown"
                     >
-                        Hi, {{ Auth::user()->name }}
+                        {{ Auth::user()->name }}
                     </a>
                     <div class="dropdown-menu">
                       <a href="{{ route('dashboard') }}" class="dropdown-item">Dashboard</a>

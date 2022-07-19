@@ -92,7 +92,8 @@
       <div class="form-group row">
         <label for="poster" class="col-sm-2 col-form-label">Poster Acara</label>
         <div class="col-sm-10">
-          <input type="file" class="form-control-file" name="poster" id="poster" required="" />
+          <input type="file" class="form-control" name="poster" id="poster" required="" />
+          <small id="posterAcara" class="form-text text-muted">*Format .JPG/.PNG</small>
         </div>
       </div>
 
@@ -104,7 +105,7 @@
       </div>
 
       <div class="row">
-        <button type="submit" class="btn btn-primary col-sm-12">Submit</button>
+        <button type="submit" class="btn btn-info col-sm-12">Simpan</button>
       </div>
     </form>
   </div>

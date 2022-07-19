@@ -59,7 +59,7 @@
                     <div class="form-group">
                       <label>Password User</label>
                       <input type="text" class="form-control" name="password" />
-                      <small>Kosongkan jika tidak ingin mengganti password</small>
+                      <small class="form-text text-muted">*Kosongkan jika tidak ingin mengganti password</small>
                     </div>
                   </div>
                   <div class="col-md-12">
@@ -79,7 +79,7 @@
                       type="submit"
                       class="btn btn-info px-5"
                     >
-                      Save Now
+                      Simpan
                     </button>
                   </div>
               </div>

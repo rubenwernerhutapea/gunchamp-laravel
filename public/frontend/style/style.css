@@ -148,11 +148,11 @@ form .button button {
 }
 
 /* REGIST */
-body.regist .login-form .container {
+.regist.login-form .container {
     max-width: 600px;
 }
 
-body.regist form .button {
+.regist form .button {
     height: 45px;
     margin: 10px 0 20px;
 }

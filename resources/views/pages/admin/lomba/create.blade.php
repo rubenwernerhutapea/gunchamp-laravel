@@ -11,7 +11,7 @@
   <div class="page-breadcrumb bg-white">
     <div class="row align-items-center">
       <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-        <h4 class="page-title">Buat Lomba</h4>
+        <h4 class="page-title">Tambah Lomba</h4>
       </div>
     </div>
   </div>
@@ -35,45 +35,64 @@
             @csrf
             <div class="card">
               <div class="card-body">
+                
                 <div class="row">
                   <div class="col-md-12">
-                    <div class="form-group">
-                      <label>Nama Lomba</label>
-                      <input type="text" class="form-control" name="name" required />
+                    <div class="form-group row">
+                      <label for="name" class="col-sm-2 col-form-label">Nama Lomba</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan nama lomba..." />
+                      </div>
                     </div>
                   </div>
+
                   <div class="col-md-12">
-                    <div class="form-group">
-                      <label>Pemilik</label>
-                      <select name="user_id" class="form-control">
-                        @foreach ($user as $pemilik)
-                          <option value="{{ $pemilik->id }}">{{ $pemilik->name }}</option>
-                        @endforeach
-                      </select>
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">Pemilik</label>
+                      <div class="col-sm-10">
+                        <select name="user_id" class="form-control">
+                          @foreach ($user as $pemilik)
+                            <option value="{{ $pemilik->id }}">{{ $pemilik->name }}</option>
+                          @endforeach
+                        </select>
+                      </div>
                     </div>
                   </div>
+
                   <div class="col-md-12">
-                    <div class="form-group">
-                      <label>Periode pendaftaran</label>
-                      <input type="text" class="form-control" name="registration_period" required />
+                    <div class="form-group row">
+                      <label for="registration_period" class="col-sm-2 col-form-label pt-0">Periode Pendaftaran</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="registration_period" name="registration_period" placeholder="Masukkan periode tanggal pendaftaran..." required="" />
+                      </div>
                     </div>
                   </div>
+
                   <div class="col-md-12">
-                    <div class="form-group">
-                      <label>Biaya Pendaftaran</label>
-                      <input type="text" class="form-control" name="registration_fee" required />
+                    <div class="form-group row">
+                      <label for="registration_fee" class="col-sm-2 col-form-label">Biaya Pendaftaran</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="registration_fee" name="registration_fee" placeholder="Masukkan biaya pendaftaran..." required="" />
+                        <small id="registFee" class="form-text text-muted">*Isi dengan angka '0' jika tidak ada biaya pendaftaran.</small>
+                      </div>
                     </div>
                   </div>
+
                   <div class="col-md-12">
-                    <div class="form-group">
-                      <label>Link Pendaftaran</label>
-                      <input type="text" class="form-control" name="registration_link" required />
+                    <div class="form-group row">
+                      <label for="registration_link" class="col-sm-2 col-form-label">Link Pendaftaran</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="registration_link" name="registration_link" placeholder="Masukkan link pendaftaran..." required="" />
+                        <small id="registLink" class="form-text text-muted">*Harap gunakan link yang sudah dipendekkan.</small>
+                      </div>
                     </div>
                   </div>
+
                   <div class="col-md-12">
-                    <div class="form-group">
-                      <label>Target Peserta</label>
-                      <select name="categories" required class="form-control">
+                    <div class="form-group row">
+                      <label for="categories" class="col-sm-2 col-form-label">Target Peserta</label>
+                      <div class="col-sm-10">
+                        <select class="form-control" name="categories" id="categories" required>
                           <option selected>Choose...</option>
                           <option value="FIKTI">FIKTI</option>
                           <option value="FTI">FTI</option>
@@ -87,37 +106,44 @@
                           <option value="Mahasiswa Gunadarma">Mahasiswa Gunadarma</option>
                           <option value="Umum">Umum</option>
                         </select>
+                      </div>
                     </div>
                   </div>
+
                   <div class="col-md-12">
-                    <div class="form-group">
-                      <label>Sosial Media</label>
-                      <input type="text" class="form-control" name="sosmed" required />
+                    <div class="form-group row">
+                      <label for="sosmed" class="col-sm-2 col-form-label">Social Media</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="sosmed" name="sosmed" placeholder="Masukkan social media..." required="" />
+                      </div>
                     </div>
                   </div>
+
                   <div class="col-md-12">
-                    <div class="form-group">
-                      <label>Poster</label>
-                      <input type="file" class="form-control" name="poster" placeholder="poster" required/>
+                    <div class="form-group row">
+                      <label for="poster" class="col-sm-2 col-form-label">Poster Acara</label>
+                      <div class="col-sm-10">
+                        <input type="file" class="form-control" name="poster" id="poster" placeholder="poster" required="" />
+                        <small id="posterAcara" class="form-text text-muted">*Format .JPG/.PNG</small>
+                      </div>
                     </div>
                   </div>
+
                   <div class="col-md-12">
-                    <div class="form-group">
-                      <label>Deskripsi</label>
-                      <textarea name="description" id="editor"></textarea>
-                      {{-- <div id="editor"></div> --}}
+                    <div class="form-group row">
+                      <label for="description" class="col-sm-2 col-form-label pt-0">Deskripsi Singkat Lomba</label>
+                      <div class="col-sm-10">
+                        <textarea id="editor" name="description" placeholder="Deskripsikan secara singkat mengenai lombamu..."></textarea>
+                        {{-- <div id="editor"></div> --}}
+                      </div>
                     </div>
                   </div>
                 </div>
+
                 <div class="row">
-                  <div class="col text-right">
-                    <button
-                      type="submit"
-                      class="btn btn-info px-5"
-                    >
-                      Save Now
-                    </button>
-                  </div>
+                  <button type="submit" class="btn btn-info col-sm-12">Simpan</button>
+                </div>
+
               </div>
             </div>
           </form>
