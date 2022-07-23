@@ -21,7 +21,7 @@
   <div class="container pt-5 pb-5">
     <div class="row mb-4">
       <div class="col text-center">
-        <img src="{{ url('/frontend/img/logo-title.png') }}" height="70" />
+        <img src="{{ url('/frontend/img/logo-title.png') }}"/>
       </div>
     </div>
 
@@ -46,7 +46,7 @@
   <div class="container text-center">
     <h2 class="font-weight-bold text">Apakah kamu penyelenggara lomba?</h2>
     <h3 class="font-italic text">Promosikan perlombaanmu sekarang!</h3>
-    <a class="btn btn-warning btn-lg tombol mt-4" href="{{ route('login') }}" role="button">Promosi Sekarang</a>
+    <a class="btn btn-warning btn-lg tombol mt-4" href="{{ route('register') }}" role="button">Promosi Sekarang</a>
   </div>
 </div>
 <!-- AKHIR BANNER -->

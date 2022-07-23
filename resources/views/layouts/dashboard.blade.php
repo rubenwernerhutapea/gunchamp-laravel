@@ -41,7 +41,7 @@
         <nav class="navbar top-navbar navbar-expand-md navbar-dark">
           <div class="navbar-header" data-logobg="skin6">
             <!-- logo -->
-            <a class="navbar-brand" href="{{ route('home') }}" target="_blank">
+            <a class="navbar-brand" href="{{ route('home') }}">
               <!-- Logo icon -->
               <b class="logo-icon">
                 <!-- Dark Logo icon -->
