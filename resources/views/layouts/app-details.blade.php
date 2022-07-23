@@ -12,6 +12,8 @@
 
     <title>@yield('name')</title>
 
+    <link rel="shortcut icon" href="{{ url('/img/logo-white.png') }}">
+
     
   </head>
   <body>

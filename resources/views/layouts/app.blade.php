@@ -12,6 +12,9 @@
 
     <title>@yield('name')</title>
 
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{{ url('/img/logo-white.png') }}">
+
     
   </head>
   <body>

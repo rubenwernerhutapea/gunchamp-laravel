@@ -5,8 +5,6 @@
 @endsection
 
 @section('content')
-<!-- Page wrapper -->
-<div class="page-wrapper">
   <!-- Bread crumb and right sidebar toggle -->
   <div class="page-breadcrumb bg-white">
     <div class="row align-items-center">
@@ -90,5 +88,4 @@
     </div>
   </div>
   <!-- End Container Fluid -->
-</div>
 @endsection
