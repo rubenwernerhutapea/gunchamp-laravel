@@ -21,7 +21,7 @@
   <div class="container pt-5 pb-5">
     <div class="row mb-4">
       <div class="col text-center">
-        <img src="{{ url('/frontend/img/logo-title.png') }}" height="70" />
+        <img src="{{ url('/frontend/img/logo-title.png') }}"/>
       </div>
     </div>
 

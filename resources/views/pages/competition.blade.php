@@ -1,7 +1,7 @@
 @extends('layouts.app-lomba')
 
 @section('name')
-  competitions
+Gunchamp | Lomba
 @endsection
 
 @section('content')

@@ -43,7 +43,7 @@ section {
 }
 
 .about {
-    height: 500px;
+    min-height: 500px;
     background-image: url("../img/bg-about.png");
     background-size: cover;
     background-position: center;
@@ -51,6 +51,10 @@ section {
 
 .about p {
     color: #0b0e40;
+}
+
+.about img {
+    height: 70px;
 }
 
 .jumbotron.banner {
@@ -227,14 +231,14 @@ section.lomba {
     color: #b1b1b1;
 }
 
-.section-details-content .card-details .trip-informations th {
+.section-details-content .card-details .comp-informations th {
     font-weight: 300;
     font-size: 18px;
     color: #0b0e40;
     padding-bottom: 10px;
 }
 
-.section-details-content .card-details .trip-informations td {
+.section-details-content .card-details .comp-informations td {
     font-weight: 300;
     font-size: 18px;
     color: #faa600;
@@ -260,18 +264,47 @@ section.lomba {
     }
 
     .jumbotron.main .container {
-        margin-top: 60px;
+        margin: auto;
+    }
+
+    .jumbotron.main h2 {
+        font-size: 24px;
     }
 
     .jumbotron.main .display-3 {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .about p {
         font-size: 15px;
     }
 
-    .jumbotron.banner .text {
+    .about img {
+        height: 50px;
+    }
+
+    .jumbotron.banner h2 {
         font-size: 25px;
+    }
+
+    .jumbotron.banner h3 {
+        font-size: 20px;
+    }
+
+    .jumbotron-lomba hr {
+        width: 250px;
+    }
+
+    .jumbotron-lomba h1 {
+        font-size: 40px;
+    }
+
+    .jumbotron-lomba h4 {
+        font-size: 16px;
+    }
+
+    .section-details-content .card-details .comp-informations th,
+    .section-details-content .card-details .comp-informations td {
+        font-size: 16px;
     }
 }

@@ -18,7 +18,7 @@
         <div class="col-lg-7 pl-lg-0">
           <div class="card card-details">
             <h1 class="font-weight-bold">{{ $lomba->name }}</h1>
-            <p>{{ $lomba->user->name }}</p>
+            <p>Diselenggarakan oleh {{ $lomba->user->name }}</p>
             <img src="{{ Storage::url($lomba->poster) }}" class="xzoom" id="xzoom-default" xoriginal="{{ Storage::url($lomba->poster) }}" />
             <h2 class="font-weight-bold">Deskripsi</h2>
             <p>
@@ -31,7 +31,7 @@
         <div class="col-lg-5">
           <div class="card card-details card-right">
             <h2>Informasi Terkait Lomba</h2>
-            <table class="trip-informations">
+            <table class="comp-informations">
               <tr>
                 <th width="50%">Periode Pendaftaran</th>
                 <td width="50%" class="text-right">{{ $lomba->registration_period }}</td>

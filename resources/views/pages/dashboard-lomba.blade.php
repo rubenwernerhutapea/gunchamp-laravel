@@ -24,7 +24,7 @@
       <div class="white-box">
         <div class="d-flex justify-content-between mb-3">
           <h3 class="box-title">Daftar Perlombaan Saya</h3>
-          <a href="{{ route('tambah-lomba') }}" class="btn btn-primary">+ Tambah Lomba</a>
+          <a href="{{ route('tambah-lomba') }}" class="btn btn-primary align-self-center">+ Tambah Lomba</a>
         </div>
 
         <div class="table-responsive">
@@ -33,11 +33,12 @@
               <tr>
                 <th width="10%" class="border-top-0">No</th>
                 <th width="20%" class="border-top-0">Nama Lomba</th>
-                <th width="20%" class="border-top-0">Periode Pendaftaran</th>
+                <th width="10%" class="border-top-0">Periode Pendaftaran</th>
                 <th width="10%" class="border-top-0">Biaya Pendaftaran</th>
                 <th width="10%" class="border-top-0">Link Pendaftaran</th>
                 <th width="10%" class="border-top-0">Target Peserta</th>
                 <th width="10%" class="border-top-0">Social Media</th>
+                <th width="10%" class="border-top-0">Poster</th>
                 <th width="10%" class="border-top-0">Aksi</th>
               </tr>
             </thead>
@@ -52,6 +53,7 @@
                   <td>{{ $lomb->registration_link }}</td>
                   <td>{{ $lomb->categories }}</td>
                   <td>{{ $lomb->sosmed }}</td>
+                  <td><img src="{{ Storage::url($lomb->poster) }}" height="100px" width="100px" alt=""></td>
                   <td>
                     <a href="{{ route('edit-lomba', $lomb->id) }}"><i class="bi bi-pencil-square text-primary"></i></a>
                     <a href="{{ route('dashboard-lomba-delete', $lomb->id) }}"><i class="bi bi-trash text-danger"></i></a>
