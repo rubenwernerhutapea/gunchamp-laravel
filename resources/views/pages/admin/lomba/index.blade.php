@@ -30,7 +30,7 @@
                                     <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Nama</th>
+                                        <th>Nama Lomba</th>
                                         <th>Pemilik</th>
                                         <th>Periode Pendaftaran</th>
                                         <th>Biaya Pendaftaran</th>

@@ -35,7 +35,7 @@
                 <th width="10%" class="border-top-0">Biaya Pendaftaran</th>
                 <th width="10%" class="border-top-0">Link Pendaftaran</th>
                 <th width="10%" class="border-top-0">Target Peserta</th>
-                <th width="10%" class="border-top-0">Social Media</th>
+                <th width="10%" class="border-top-0">Sosial Media</th>
                 <th width="10%" class="border-top-0">Poster</th>
                 <th width="10%" class="border-top-0">Aksi</th>
               </tr>

@@ -26,27 +26,17 @@
         </div>
 
         <div class="comment-widgets">
-          <!-- Comment Row -->
-          <div class="d-flex flex-row comment-row p-3 mt-0">
-            <div class="p-2"><img src="{{ url('/backend/plugins/images/users/varun.jpg') }}" alt="user" width="50" class="rounded-circle" /></div>
-            <div class="comment-text ps-2 ps-md-3 w-100">
-              <h5 class="font-medium">{{ Auth::user()->name }}</h5>
-              <span class="mb-3 d-block">Lorem Ipsum is simply dummy text of the printing and type setting industry.It has survived not only five centuries. </span>
-              <div class="comment-footer d-md-flex align-items-center">
-                <span class="badge bg-primary rounded">Pending</span>
-
-                <div class="text-muted fs-2 ms-auto mt-2 mt-md-0">April 14, 2021</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="rules d-flex flex-row comment-row p-4 mt-0">
-            <p>
-              (mau diisi rules sih niatnya) Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam quia neque recusandae, molestiae eligendi perspiciatis quaerat saepe iusto odit, porro provident delectus debitis dolore
-              qui labore cumque enim in impedit, alias aspernatur nulla atque expedita? Corporis voluptate soluta minima perferendis facere qui ex aliquid, tenetur eaque pariatur labore ea odio iusto deserunt ducimus asperiores nisi
-              adipisci, consectetur nam! Ullam expedita sed inventore assumenda ipsam commodi magni unde, optio nisi enim, qui deserunt rerum nobis vero, error perferendis porro minus aliquid repellendus et quod obcaecati temporibus
-              voluptates. A impedit qui at deserunt, alias incidunt facere quisquam et voluptatibus excepturi soluta ratione.
-            </p>
+          <!-- Rules -->
+          <div class="rules px-4 mt-0">
+            <p><strong>Panduan menggunakan menu: </strong></p>
+            <ol>
+              <li>Setelah berhasil login, akan terdapat sidebar menu yang berisi 3 (tiga) menu. Pada tampilan mobile, dapat mengklik icon 'tiga baris' di pojok kanan atas untuk membuka sidebar menu.</li>
+              <li>Sidebar menu terdiri dari menu dashboard, profil dan lomba saya.</li>
+              <li><strong>Menu Dashboard</strong>, digunakan sebagai tampilan awal ketika baru login. Pada menu ini akan ditampilkan panduan menggunakan menu-menu pada user.</li>
+              <li><strong>Menu profil</strong>, digunakan untuk melihat data pribadi yang sudah didaftarkan sebelumnya. Pada menu ini, user juga dapat mengubah data pribadi dan password dari akun yang dimiliki.</li>
+              <li><strong>Menu lomba saya</strong>, digunakan untuk melihat tabel data dari lomba yang berhasil ditambahkan ke website Gunchamp. Pada menu ini user dapat menambah data lomba baru, memperbaharui data lomba dan menghapus data lomba menggunakan pada tombol aksi yang tersedia.<strong> Menu ini adalah menu utama bagi kamu yang ingin mempromosikan lombamu!</strong></li>
+              <li>Untuk kembali pada tampilan beranda website dapat mengklik<strong> logo Gunchamp</strong> pada sidebar menu dan untuk keluar dari akun dapat mengklik <strong>tombol keluar</strong>.</li>
+            </ol>
           </div>
         </div>
       </div>
