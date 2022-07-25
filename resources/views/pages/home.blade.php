@@ -29,11 +29,9 @@
     <div class="row justify-content-center">
       <div class="col-md-8 text-center">
         <p>
-          Pariwisata di Daerah Istimewa Yogyakarta selalu meningkat setiap tahunnya. Yogya menjadi magnet wisatawan manca dan domestik untuk selalu kangen berlibur ke Yogyakarta. Ada banyak alasan mengapa wisatawan menghabiskan waktu
-          liburan di Yogya (Biaya murah, Transportasi mudah, Kuliner enak dan murah, Surganya spot wisata alam, Wisata pantai, Budaya, Education, Sejarah dan masih banyak lagi) ditambah banyak sekali tempat-tempat wisata Yogya terbaru
-          2021 yang sedang hits sekarang ini. <br />
+          Berbagai macam acara perlombaan selalu diadakan di Universitas Gunadarma setiap tahunnya. Umumnya perlombaan tersebut diselenggarakan oleh Universitas, BEM (Badan Eksekutif Mahasiswa) di setiap fakultas, HIMA (Himpunan Mahasiswa) di setiap jurusan, UKM (Unit Kegiatan  Mahasiswa) atau komunitas, yang dimana para penyelenggara tersebut memiliki tujuan yang sama yaitu menjadi wadah pengembangan diri dan memaksimalkan potensi mahasiswa. Mahasiswa dapat merasakan berbagai manfaat dari mengikuti perlombaan, salah satunya adalah dapat menguji dan mengetahui sudah sejauh mana perkembangan potensi yang dimiliki. <br />
           <br />
-          Dengan begitu, Explore YOGYA mengajak traveler untuk mengunjungi beberapa tempat wisata yang berada di Yogyakarta. Are you ready to explore Yogyakarta?
+          Dengan begitu, Gunchamp (Gunadarma Champhionship) menyediakan informasi lengkap mengenai perlombaan di Universitas Gunadarma untuk mempermudah para champions yang sedang mencari informasi perlombaan di Universitas Gunadarma. Are you ready to be a champion?
         </p>
       </div>
     </div>

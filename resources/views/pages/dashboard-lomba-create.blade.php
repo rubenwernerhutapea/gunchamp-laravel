@@ -48,7 +48,7 @@
         <label for="registration_fee" class="col-sm-2 col-form-label">Biaya Pendaftaran</label>
         <div class="col-sm-10">
           <input type="text" class="form-control" id="registration_fee" name="registration_fee" placeholder="Masukkan biaya pendaftaran..." required="" />
-          <small id="registFee" class="form-text text-muted">*Isi dengan angka '0' jika tidak ada biaya pendaftaran.</small>
+          <small id="registFee" class="form-text text-muted">*Isi dengan 'GRATIS' jika tidak ada biaya pendaftaran.</small>
         </div>
       </div>
 

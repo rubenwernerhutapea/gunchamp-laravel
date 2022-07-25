@@ -27,13 +27,16 @@
 
           <div class="comment-widgets">
             <!-- Rules -->
-            <div class="rules d-flex flex-row comment-row p-4 mt-0">
-              <p>
-                (mau diisi rules sih niatnya) Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam quia neque recusandae, molestiae eligendi perspiciatis quaerat saepe iusto odit, porro provident delectus debitis dolore
-                qui labore cumque enim in impedit, alias aspernatur nulla atque expedita? Corporis voluptate soluta minima perferendis facere qui ex aliquid, tenetur eaque pariatur labore ea odio iusto deserunt ducimus asperiores nisi
-                adipisci, consectetur nam! Ullam expedita sed inventore assumenda ipsam commodi magni unde, optio nisi enim, qui deserunt rerum nobis vero, error perferendis porro minus aliquid repellendus et quod obcaecati temporibus
-                voluptates. A impedit qui at deserunt, alias incidunt facere quisquam et voluptatibus excepturi soluta ratione.
-              </p>
+            <div class="rules px-4 mt-0">
+              <p><strong>Panduan menggunakan dashboard admin: </strong></p>
+              <ol>
+                <li>Setelah berhasil login menggunakan akun admin, akan terdapat sidebar menu yang berisi 3 (tiga) menu. Pada tampilan mobile, dapat mengklik icon 'tiga baris' di pojok kanan atas untuk membuka sidebar menu.</li>
+                <li>Sidebar menu terdiri dari menu dashboard, database user dan database lomba.</li>
+                <li><strong>Menu Dashboard</strong>, digunakan sebagai tampilan awal ketika baru login sebagai admin. Pada menu ini akan ditampilkan panduan menggunakan menu-menu pada admin.</li>
+                <li><strong>Menu Database user</strong>, digunakan untuk melihat tabel data dari seluruh user (pengguna) yang berhasil mendaftarkan diri ke website Gunchamp. Pada menu ini admin dapat menambah data user baru, memperbaharui data user dan menghapus data user menggunakan pada tombol aksi yang tersedia.</li>
+                <li><strong>Menu Database lomba</strong>, digunakan untuk melihat tabel data dari seluruh lomba yang berhasil ditambahkan oleh user ke website Gunchamp. Pada menu ini admin dapat menambah data lomba baru, memperbaharui data lomba dan menghapus data lomba menggunakan pada tombol aksi yang tersedia.</li>
+                <li>Untuk kembali pada tampilan beranda website dapat mengklik<strong> logo Gunchamp</strong> pada sidebar menu dan untuk keluar dari akun dapat mengklik <strong>tombol keluar.</strong></li>
+              </ol>
             </div>
           </div>
         </div>
